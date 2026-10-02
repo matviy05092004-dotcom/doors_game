@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOORS - Door 100</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="door100-page">
+
+    <header class="door100-header">
+        <h1 class="interactive-text">DOOR 100</h1>
+    </header>
+
+    <main class="door100-main">
+        <div class="door100-card">
+            <h2 class="interactive-text">THE END</h2>
+            <p class="interactive-text">Ви дійшли до останніх дверей...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="thanks-text">
+            <p class="interactive-text">Дякую за увагу!</p>
+        </div>
+        <div class="contacts">
+            <span>diskord: <strong>woir</strong></span>
+            <span>tg: <strong>woir.teg</strong></span>
+        </div>
+    </footer>
+
+    <!-- Скрипт: розбиває текст на букви та ПРИТЯГУЄ їх до курсора -->
+    <script>
+        // Розбиваємо текст у блоках .interactive-text на окремі літери
+        document.querySelectorAll('.interactive-text').forEach(el => {
+            const text = el.innerText;
+            el.innerHTML = text.split('').map(char => {
+                if (char === ' ') return ' ';
+                return `<span class="char">${char}</span>`;
+            }).join('');
+        });
+
+        // Додаємо ефект ПРИТЯГАННЯ літер до курсора (наоборот)
+        const chars = document.querySelectorAll('.char');
+
+        document.addEventListener('mousemove', (e) => {
+            chars.forEach(char => {
+                const rect = char.getBoundingClientRect();
+                const charX = rect.left + rect.width / 2;
+                const charY = rect.top + rect.height / 2;
+
+                const deltaX = e.clientX - charX;
+                const deltaY = e.clientY - charY;
+                const distance = Math.hypot(deltaX, deltaY);
+
+                const maxDistance = 80; // Радіус дії мишки
+
+                if (distance < maxDistance) {
+                    const angle = Math.atan2(deltaY, deltaX);
+                    const force = (maxDistance - distance) / maxDistance;
+                    
+                    // ПЛЮС замість мінуса притягує букви НАЗУСТРІЧ мишці
+                    const moveX = Math.cos(angle) * force * 18; 
+                    const moveY = Math.sin(angle) * force * 18; 
+
+                    char.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                } else {
+                    char.style.transform = 'translate(0px, 0px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOORS - Guiding Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="guiding-page">
+
+    <header class="guiding-header">
+        <h1>GUIDING LIGHT</h1>
+    </header>
+
+    <main class="guiding-main">
+        <div class="guiding-card">
+            <h2>Світло спасіння</h2>
+            <p class="interactive-text">Коли темрява огортає коридори, а монстри чатують за кожним кутком, Guiding Light підказує правильний шлях та рятує тебе від загибелі.</p>
+            <p class="quote interactive-text">«Блакитно-золоте сяйво дарує другий шанс у найвирішальніший момент...»</p>
+        </div>
+
+        <a href="end.html" class="doors-btn guiding-btn">the end?</a>
+    </main>
+
+    <footer>
+        <div class="contacts">
+            <span>diskord: <strong>woir</strong></span>
+            <span>tg: <strong>woir.teg</strong></span>
+        </div>
+    </footer>
+
+    <!-- Скрипт: розбиває текст на букви та плавно відштовхує їх від курсора -->
+    <script>
+        // Розбиваємо текст у блоках .interactive-text на окремі літери
+        document.querySelectorAll('.interactive-text').forEach(el => {
+            const text = el.innerText;
+            el.innerHTML = text.split('').map(char => {
+                if (char === ' ') return ' ';
+                return `<span class="char">${char}</span>`;
+            }).join('');
+        });
+
+        // Додаємо ефект відштовхування літер від курсора
+        const chars = document.querySelectorAll('.char');
+
+        document.addEventListener('mousemove', (e) => {
+            chars.forEach(char => {
+                const rect = char.getBoundingClientRect();
+                const charX = rect.left + rect.width / 2;
+                const charY = rect.top + rect.height / 2;
+
+                const deltaX = e.clientX - charX;
+                const deltaY = e.clientY - charY;
+                const distance = Math.hypot(deltaX, deltaY);
+
+                const maxDistance = 60; // Радіус дії мишки
+
+                if (distance < maxDistance) {
+                    const angle = Math.atan2(deltaY, deltaX);
+                    const force = (maxDistance - distance) / maxDistance;
+                    const moveX = -Math.cos(angle) * force * 15; // Відхід по X (недалеко)
+                    const moveY = -Math.sin(angle) * force * 15; // Відхід по Y (недалеко)
+
+                    char.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                } else {
+                    char.style.transform = 'translate(0px, 0px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

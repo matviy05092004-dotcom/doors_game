@@ -1,0 +1,395 @@
+/* From Uiverse.io by doniaskima */ 
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-53 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-53:disabled {
+  cursor: default;
+}
+
+.btn-53:-moz-focusring {
+  outline: auto;
+}
+
+.btn-53 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+  display: none;
+}
+
+.btn-53 {
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-53 .original {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-53 .letters {
+  display: inline-flex;
+}
+
+.btn-53 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-53:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.original {
+    
+}@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@400;600&display=swap');
+
+/* Темний задній фон у стилі готелю DOORS */
+body {
+  background-color: #0a0908;
+  background-image: 
+    radial-gradient(circle at 50% 15%, rgba(190, 90, 20, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 50% 85%, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  color: #d1c7bd;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Обмежувач ширини для зручного читання */
+header, main, footer {
+  width: 100%;
+  max-width: 750px;
+}
+
+/* Золотисті заголовочки з тінню */
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  color: #e5a93c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(229, 169, 60, 0.3), 2px 2px 4px #000;
+  border-bottom: 2px solid #3d2b1f;
+  padding-bottom: 8px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* Карточка для тексту */
+main p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  background: rgba(20, 16, 13, 0.85);
+  border: 1px solid #4a3828;
+  border-left: 4px solid #e5a93c;
+  padding: 22px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+/* Стилізація контакту у футері */
+footer .contacts {
+  display: flex;
+  gap: 20px;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #ffaa44;
+  background: rgba(12, 9, 7, 0.9);
+  padding: 12px 20px;
+  border: 1px dashed #6e4c28;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+footer .contacts strong {
+  color: #f1eeee;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+header img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px; /* Або будь-яка інша ширина, наприклад 500px чи 700px */
+    height: auto;
+    border-radius: 12px; /* Необов'язково: закруглені кути */
+}
+.death-screen {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a0505;
+    border: 2px solid #ff3333;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.guiding-light-msg p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #66ccff; /* Синій колір як у Guiding Light в грі */
+}
+/* Робимо блок контактів гнучким для розміщення в один рядок */
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Відстань між елементами */
+}
+
+/* Компактна кнопка DOORS для футера */
+.doors-btn {
+  padding: 6px 14px;
+  background-color: #1a1614;
+  color: #f3e5ab;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #8b6b3e;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.doors-btn:hover {
+  background-color: #2a221d;
+  color: #ffffff;
+  border-color: #d4af37;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  transform: scale(1.05);
+}
+
+.doors-btn:active {
+  transform: scale(0.95);
+}
+/* --- СТИЛІ ДЛЯ СТОРІНКИ GUIDING LIGHT --- */
+
+/* Золотий фон та підсвічування всієї сторінки */
+body.guiding-page {
+  background-color: #0d0a06;
+  color: #fff8e7;
+  font-family: 'Georgia', serif;
+  background-image: radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 70%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Заголовок із золотим сяйвом */
+.guiding-header h1 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 36px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 180, 0, 0.5);
+  margin-top: 40px;
+}
+
+/* Картка з текстом про спасіння */
+.guiding-card {
+  max-width: 600px;
+  margin: 40px auto 20px;
+  padding: 30px;
+  background: rgba(20, 16, 10, 0.85);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), inset 0 0 15px rgba(255, 215, 0, 0.15);
+  text-align: center;
+}
+
+.guiding-card h2 {
+  color: #ffe680;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 230, 128, 0.6);
+}
+
+.guiding-card p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #f3e5ab;
+}
+
+.guiding-card .quote {
+  font-style: italic;
+  color: #ffd700;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+/* Кнопка із золотистим підсвічуванням */
+.guiding-btn {
+  display: inline-block;
+  text-decoration: none;
+  border-color: #ffd700;
+  color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+.guiding-btn:hover {
+  background-color: #ffd700;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+}
+/* Стиль для кожної окремої букви */
+.char {
+  display: inline-block;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+/* --- СТИЛІ ДЛЯ ОСТАННЬОЇ ДВЕРІ (DOOR 100) --- */
+
+body.door100-page {
+  background-color: #050303;
+  /* Атмосферний градієнт тривожного червоно-іржавого світла */
+  background-image: radial-gradient(circle at center, rgba(139, 0, 0, 0.25) 0%, rgba(5, 3, 3, 0.95) 80%);
+  color: #f3e5ab;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Заголовок DOOR 100 */
+.door100-header h1 {
+  font-size: 50px;
+  color: #ff3333;
+  letter-spacing: 6px;
+  text-shadow: 0 0 10px #ff0000, 0 0 25px rgba(255, 0, 0, 0.6);
+  margin-top: 40px;
+}
+
+/* Картка Дверей 100 */
+.door100-card {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(15, 10, 10, 0.9);
+  border: 2px solid #8b0000;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5), inset 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.door100-card h2 {
+  font-size: 36px;
+  color: #ffaa00;
+  text-shadow: 0 0 10px rgba(255, 170, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.door100-card p {
+  font-size: 18px;
+  color: #d1c7bd;
+}
+
+/* Кнопка на сторінці Дверей 100 */
+.door100-btn {
+  border-color: #ff3333;
+  color: #ff3333;
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
+}
+
+.door100-btn:hover {
+  background-color: #ff3333;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(255, 51, 51, 0.9);
+}
+
+/* Текст футера */
+.thanks-text p {
+  font-size: 22px;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  margin-bottom: 15px;
+}
+
+/* Плавний рух літер при притяганні */
+.char {
+  display: inline-block;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
